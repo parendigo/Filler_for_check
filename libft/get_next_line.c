@@ -6,7 +6,7 @@
 /*   By: mlarraq <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 18:12:08 by mlarraq           #+#    #+#             */
-/*   Updated: 2020/05/11 15:47:00 by student          ###   ########.fr       */
+/*   Updated: 2020/05/11 17:13:23 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char			*ft_strfromstart(const char *s, size_t start)
 
 	i = 0;
 	a = ft_strlen(s);
+	if (a - start == 0)
+		return (NULL);
 	if (!(src = (char*)malloc(sizeof(*src) * (a - start + 1))))
 		return (NULL);
 	while (start < a)
