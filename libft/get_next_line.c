@@ -6,7 +6,7 @@
 /*   By: mlarraq <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 18:12:08 by mlarraq           #+#    #+#             */
-/*   Updated: 2020/03/23 13:57:42 by student          ###   ########.fr       */
+/*   Updated: 2020/05/11 15:47:00 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int				get_next_line(const int fd, char **line)
 			}
 		}
 	if (!text[fd])
-		text[fd] = ft_strnew(1);
+		text[fd] = ft_strnew(0);
 	count = (text[fd][0] != '\0' ? 1 : 0);
 	text[fd] = cool_function(&line, &text[fd]);
 	if (text[fd][0] == '\0')

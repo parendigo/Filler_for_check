@@ -6,7 +6,7 @@
 /*   By: mlarraq <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 11:10:18 by mlarraq           #+#    #+#             */
-/*   Updated: 2020/03/23 13:31:53 by student          ###   ########.fr       */
+/*   Updated: 2020/05/11 15:10:11 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void		place_the_rest(t_filler *x, int h, int w)
 	nu = 0;
 	if (h > 0)
 		if (x->intfield[h - 1][w] > 0)
-			if (nu == 0 || x->intfield[h][w - 1] < nu)
+			if (nu == 0 || x->intfield[h - 1][w] < nu)
 				nu = x->intfield[h - 1][w];
 	if (w > 0)
 		if (x->intfield[h][w - 1] > 0)
@@ -52,11 +52,11 @@ static void		place_the_rest(t_filler *x, int h, int w)
 				nu = x->intfield[h][w - 1];
 	if (h + 1 < x->fheight)
 		if (x->intfield[h + 1][w] > 0)
-			if (nu == 0 || x->intfield[h][w - 1] < nu)
+			if (nu == 0 || x->intfield[h + 1][w] < nu)
 				nu = x->intfield[h + 1][w];
 	if (w + 1 < x->fwidth)
 		if (x->intfield[h][w + 1] > 0)
-			if (nu == 0 || x->intfield[h][w - 1] < nu)
+			if (nu == 0 || x->intfield[h][w + 1] < nu)
 				nu = x->intfield[h][w + 1];
 	nu = nu == 0 ? 0 : nu + 1;
 	x->intfield[h][w] = nu;
