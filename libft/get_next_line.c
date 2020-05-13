@@ -39,7 +39,7 @@ char			*ft_strfromstart(const char *s, size_t start)
 
 	i = 0;
 	a = ft_strlen(s);
-	if (a - start == 0)
+	if (a - start <= 0)
 		return (NULL);
 	if (!(src = (char*)malloc(sizeof(*src) * (a - start + 1))))
 		return (NULL);
@@ -55,6 +55,13 @@ char			*cool_function(char ***line, char **text)
 	size_t		i;
 
 	i = 0;
+	if ((*text)[0] == '\0')
+	{
+		**line = ft_strdup("\0");
+		s = ft_strdup("\0");
+		free(*text);
+		return (s);
+	}
 	while ((*text)[i] != '\n' && (*text)[i] != '\0')
 		i++;
 	**line = ft_strmdup(*text, 0, i);
