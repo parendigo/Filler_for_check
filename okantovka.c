@@ -6,7 +6,7 @@
 /*   By: student <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:46:49 by student           #+#    #+#             */
-/*   Updated: 2020/03/23 13:53:14 by student          ###   ########.fr       */
+/*   Updated: 2020/05/21 12:14:24 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,14 @@ void			okantovka(t_filler *x)
 	}
 }
 
-void			find_player(t_filler *x)
+int				find_player(t_filler *x)
 {
 	char	*line;
 
 	get_next_line(0, &line);
 	x->player = line[10] - 48;
 	ft_strdel(&line);
+	if (x->player != 1 && x->player != 2)
+		x->player = 1;
+	return (0);
 }

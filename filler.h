@@ -6,7 +6,7 @@
 /*   By: mlarraq <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 14:52:58 by mlarraq           #+#    #+#             */
-/*   Updated: 2020/03/23 13:56:01 by student          ###   ########.fr       */
+/*   Updated: 2020/05/21 12:12:04 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ typedef struct		s_filler
 void				fill_numbers(t_filler *x);
 int					placer_int(t_filler *x);
 void				okantovka(t_filler *x);
-void				find_player(t_filler *x);
+int					find_player(t_filler *x);
 
 #endif
